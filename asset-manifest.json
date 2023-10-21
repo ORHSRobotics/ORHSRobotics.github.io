@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.92ed1606.css",
-    "main.js": "/static/js/main.0e6a48e2.js",
+    "main.js": "/static/js/main.c59783d1.js",
     "static/js/787.f4b26195.chunk.js": "/static/js/787.f4b26195.chunk.js",
     "static/media/GameFieldVideo.mp4": "/static/media/GameFieldVideo.fe063c825ec9ee0b3661.mp4",
     "static/media/RoboticsTeam.png": "/static/media/RoboticsTeam.4d26c51b20a9574bb297.png",
+    "static/media/RobotPicture.png": "/static/media/RobotPicture.38392a4af9cb7977e431.png",
     "static/media/GameFieldBackground.png": "/static/media/GameFieldBackground.c07ea1a3cb9bfe597a89.png",
     "static/media/PlaqueRemoval.jpg": "/static/media/PlaqueRemoval.dd9fda2e89b5aa0a3914.jpg",
-    "static/media/RobotPicture.png": "/static/media/RobotPicture.2373ae74e6ce53d2778b.png",
     "static/media/SirJerry.jpg": "/static/media/SirJerry.9c6b9d5f6960f2e43a34.jpg",
     "static/media/Blue Heart O1.png": "/static/media/Blue Heart O1.9f87ce8d9297ec826a05.png",
     "static/media/SpaceCadetsLogo.png": "/static/media/SpaceCadetsLogo.bd19f1ffec6a72dbfc00.png",
@@ -39,11 +39,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.92ed1606.css.map": "/static/css/main.92ed1606.css.map",
-    "main.0e6a48e2.js.map": "/static/js/main.0e6a48e2.js.map",
+    "main.c59783d1.js.map": "/static/js/main.c59783d1.js.map",
     "787.f4b26195.chunk.js.map": "/static/js/787.f4b26195.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.92ed1606.css",
-    "static/js/main.0e6a48e2.js"
+    "static/js/main.c59783d1.js"
   ]
 }
