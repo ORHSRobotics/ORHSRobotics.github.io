@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import {
     FooterSection,
     FooterCompanyInfoSection,
@@ -9,19 +9,26 @@ import {
 } from "./FooterElements"
 
 import { About, Sponsors, Game } from "../Footer/FooterRoutingObjects";
+import { useNavigate } from 'react-router-dom';
 
 export const Footer = () => {
+    const navigate = useNavigate();
+    const [placeToGo, setPlaceToGo] = useState(null)
+    useEffect(() => {
+        navigate(placeToGo)
+    }, [placeToGo])
+
     return (
         <FooterSection>
             <FooterContentSection>
                 {FooterCompanyInfoSection()}
                 <FooterContentRowsSection>
-                    {FooterContentSectionRow(About)}
-                    {FooterContentSectionRow(Game)}
-                    {FooterContentSectionRow(Sponsors)}
+                    {FooterContentSectionRow(About, setPlaceToGo)}
+                    {FooterContentSectionRow(Game, setPlaceToGo)}
+                    {FooterContentSectionRow(Sponsors, setPlaceToGo)}
                 </FooterContentRowsSection>
             </FooterContentSection>
-            {FooterBottom(['Asclepius Precisions', 'ORHSRobotics@gmail.com'])}
+            {FooterBottom(['@orhs_robotics', 'roboticsridge@gmail.com'])}
         </FooterSection>
     )
 }

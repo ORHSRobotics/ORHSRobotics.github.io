@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      var segment = window.location.pathname.split('/')[1];
+      if (segment) {
+        window.location.replace("/#" + segment);
+      } else {
+        window.location.replace("/");
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>

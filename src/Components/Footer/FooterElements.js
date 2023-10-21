@@ -1,6 +1,7 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 
 
 export const ImageSectionL = styled.img`
@@ -50,7 +51,7 @@ export const FooterCompanyInfoSection = () => {
     `;
     const CompanyText = styled.text`
         color: #000;
-        font-size: min(4vw, 35px);
+        font-size: min(2.5vw, 35px);
         font-family: Montserrat;
     `;
     const LogoSection = styled.img`
@@ -65,7 +66,7 @@ export const FooterCompanyInfoSection = () => {
     const logo = require('./../../Assets/ORHSRoboticsLogo.png')
     return (
         <Container>
-            <LogoSection src={logo}></LogoSection>
+            <LogoSection src={logo} alt="Oak Ridge Robotics Logo"></LogoSection>
             <CompanyText>{Name}</CompanyText>
         </Container>
     )
@@ -78,7 +79,7 @@ export const FooterContentRowsSection = styled.section`
     font-family: Montserrat;
 `;
 
-export const FooterContentSectionRow = (info) => {
+export const FooterContentSectionRow = (info, navigate) => {
     const Container = styled.section`
         width: 20vw;
         height: auto;
@@ -104,28 +105,34 @@ export const FooterContentSectionRow = (info) => {
         font-family: Montserrat;
     `;
 
+
+    const navigateAndScroll = (path, id, offset = 50) => { // offset is the distance above the element you want to scroll to
+        navigate(path);
+        setTimeout(() => {
+            const element = document.getElementById(id);
+            if (element) {
+                const yPosition = element.offsetTop - offset; // Get the element's position and subtract the offset
+                window.scrollTo({ top: yPosition, behavior: 'smooth' });
+            }
+        }, 100);
+    };
+
+
     return (
         <Container>
             <TitleText>{info.Title}</TitleText>
             {Object.keys(info).map((key) => {
-                if (key == "Title") {
-                    return null
-                } else {
-                    return (
-                        <ItemText to={info[key]} activeStyle>
-                            {key}
-                        </ItemText>
-                    )
-                }
-
+                if (key === "Title") return null;
+                const { path, id } = info[key];
+                return (
+                    <ItemText onClick={() => navigateAndScroll(path, id)} activeStyle>
+                        {key}
+                    </ItemText>
+                );
             })}
         </Container>
-    )
-
-
-
-}
-
+    );
+};
 
 export const FooterBottom = (text) => {
     const FooterText = styled.text`
@@ -150,7 +157,7 @@ export const FooterBottom = (text) => {
         <Container>
             {text.map(item => {
                 return (
-                   <FooterText>{item}</FooterText> 
+                    <FooterText>{item}</FooterText>
                 )
             })}
         </Container>

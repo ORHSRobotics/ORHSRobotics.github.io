@@ -24,9 +24,9 @@ export const Container = styled.section`
 
 `;
 
-export const OurMission = styled.text`
+export const OurMission = styled.h1`
     color: #000;
-    font-size: min(3.5vw, 40px);
+    font-size: min(4.5vw, 40px);
     text-align: center;
     width: 90%;
     max-width: 70%;
@@ -35,9 +35,9 @@ export const OurMission = styled.text`
     font-family: Montserrat;
 `;
 
-export const SupportText = styled.text`
+export const SupportText = styled.p`
     color: #000;
-    font-size: min(2.5vw, 25px);
+    font-size: min(3.5vw, 25px);
     text-align: center;
     width: 90%;
     max-width: 70%;
@@ -90,7 +90,7 @@ export const ImageSectionXL = styled.img`
         height: auto;
 `;
 
-export const SecondSectionText = styled.text`
+export const SecondSectionText = styled.h5`
     font-size: min(5vw, 2.5rem);
     max-width: 80%;
     margin-top: 10px;
@@ -107,103 +107,45 @@ export const SecondSection = styled.section`
     flex-direction: space-between;
     width: 80%;
     height: auto;
+    @media screen and (max-width: 800px) {
+        flex-direction: column;
+    }
 `;
 
-export const SponsorLogo = (src) => {
+export const SponsorLogo = (src, alt, width, height) => {
     const Image = styled.img.attrs({
         src: src,
         alt: 'Logo'
-      })`
+    })`
         display: flex;
         width: 10vw;
         max-width: 200px;
         padding: 0% 5%;
+        @media screen and (max-width: 800px) {
+            width: 40vw;
+            max-width: 200px;
+            padding: 5% 0%;
+        }
         
     `;
 
     return (
-        <Image src={src}></Image>
+        <Image src={src} alt={alt}></Image>
     )
 }
-
-export const CourseSpiralHorizontal = styled.img`
-    padding: 2rem 0rem;
-    width: 80%;
-    height: auto;
-    @media screen and (max-width: 1000px) {
-        display: none;
-    }
-`;
-
-export const CourseSpiralVertical = styled.img`
-    padding: 2rem 0rem;
-    width: 80%;
-    height: auto;
-    @media screen and (min-width: 1000px) {
-        display: none;
-    }
-`;
-
-export const ThirdSectionContainer = styled.section`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-    @media screen and (max-width: 1000px) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-`;
-
-export const ThirdSectionColumn = styled.section`
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-    max-width: 70%;
-    height: auto;
-    align-items: center;
-`;
-
-export const ThirdSectionImage = styled.img`
-    padding: 2rem 5rem 1rem 5rem;
-    width: 50%;
-    height: auto;
-    @media screen and (max-width: 1000px) {
-        padding: 2rem 0rem 1rem 0rem;
-        width: 100%;
-        max-width: 20rem
-    }
-`;
-export const ThirdSectionTextHeader = styled.text`
-    font-weight: bold;
-    font-size: min(3vw, 2rem);
-    text-align: center;
-    padding: 0rem 1rem;
-    @media screen and (max-width: 1000px) {
-        font-size: min(5vw, 2rem);
-    }
-`;
-
-export const ThirdSectionText = styled.text`
-    font-size: min(2.5vw, 1.5rem);
-    padding: 0rem 1.5rem;
-    text-align: center;
-    @media screen and (max-width: 1000px) {
-        font-size: min(4vw, 2rem);
-    }
-`;
-
 
 export const IntroText = styled.p`
     flex: 1;
     align-items: center;
     justify-content: center;
     color: #000; // Adjust this color to match your design
-    font-size: min(2vw, 25px); // Adjust as needed
+    font-size: min(3.5vw, 25px); // Adjust as needed
     padding: 5rem;
     width: 80%; // Adjust as needed
     font-family: Montserrat;
+    @media screen and (max-width: 800px) {
+        padding: 2rem;
+    }
 `;
 
 export const TeamImage = styled.img`
@@ -215,18 +157,22 @@ export const TeamImage = styled.img`
     color: #FFF;
     font-size: 2rem; 
     width: 100%; 
+    height: auto;
 `;
-export const HeartPicture = styled.img`
+export const IncisionDecisionPicture = styled.img`
     flex: 1;
     display: flex;
     align-items: center;
     align-self: center;
     justify-content: center;
     width: 5%; 
+    height: auto;
     max-width: 30%;
     padding: 0% 0% 0% 0%;
-    @media screen and (max-width: 1700px) {
+    @media screen and (max-width: 1600px) {
         display: none;
+        height: auto;
+        max-width: 30%;
     }
 `;
 export const MainContent = styled.div`

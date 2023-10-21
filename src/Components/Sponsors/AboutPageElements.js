@@ -31,10 +31,18 @@ export const ActivitiesHeader = styled.h1`
 
 export const MainContent = styled.div`
     display: flex;
-    width: 90%;
     justify-content: space-evenly;
     align-items: center;
     padding: 3rem 5rem;
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0px 0px 0px;
+        align-self: center;
+        align-items: center;
+        justify-content: center;
+        width: 100%
+    }
 `;
 export const HeartPicture = styled.img`
     flex: 1;
@@ -45,7 +53,7 @@ export const HeartPicture = styled.img`
     width: 40%; 
     max-width: 50%;
     padding: 0% 0% 0% 0%;
-    @media screen and (max-width: 100px) {
+    @media screen and (max-width: 1000px) {
         display: none;
     }
 `;
@@ -64,8 +72,30 @@ export const SponsorDescription = styled.p`
 export const Text = styled.p`
     color: #000;
     align-self: center;
+    font-size: min(3.5vw, 30px);
+    text-align: center;
+    padding: 0rem 2rem;
+    max-width: 100%;
+    @media screen and (max-width: 1000px) {
+        width: 100%;
+        padding: 0px;
+    }
+`;
+
+export const SponsorSupportText = styled.p`
+    color: #000;
+    align-self: center;
     font-size: min(2.5vw, 30px);
     text-align: center;
     padding: 0rem 2rem;
     max-width: 100%;
-`
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+`;
+
+
+
+
+
+

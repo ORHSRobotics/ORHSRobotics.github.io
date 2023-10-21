@@ -24,26 +24,41 @@ export const Container = styled.section`
 
 `;
 
+export const BiSection = styled.div`
+    height: 40rem;
+    display: flex;
+    flexDirection: row;
+    alignItems: center; 
+    justifyContent: center;
+    align-self: center;
+    justify-self: center;
+    @media screen and (max-width: 1000px) {
+        flex-direction: column;
+        height: 60%;
+        
+    }
+`;
+
+export const Header = styled.h1`
+    color: #000;
+    font-size: min(4.5vw, 40px);
+    text-align: center;
+    max-width: 100%;
+    margin-top: 5%;
+    font-family: Montserrat;
+`;
+
 export const VideoContainer = styled.div`
-    position: relative;
     width: 100%;
-    height: 100vh; // Adjust this according to your design needs
+    display: flex;
     background-color: #f0f0f0;
     overflow: hidden;
 `;
 
 export const VideoBackground = styled.video`
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
     height: auto;
     z-index: 0;
-    transform: translateX(-50%) translateY(-50%);
     width: 100%;
-    height: 100%;
     object-fit: fill;
 
 
@@ -89,21 +104,25 @@ export const VideoBackgroundSection = styled.video`
 export const TextContainerOne = styled.p`
     padding: 2% 2%;
     border-radius: 1rem;
-    font-size: min(1.8vw, 25px);
+    font-size: min(2.5vw, 25px);
     color: #000;
     text-align: center;
     max-width: 80%;
     margin: 10px 5%;
+    margin-bottom: 7%;
     height: 45%;
     max-height: 50%
     border-radius: 5px;
     font-family: Montserrat;
+    @media screen and (max-width: 1000px) {
+        font-size: min(3.5vw, 25px);
+    }
 `;
 
 export const TextContainer = styled.p`
     padding: 2% 2%;
     border-radius: 1rem;
-    font-size: min(1.8vw, 25px);
+    font-size: min(3.5vw, 25px);
     color: #000;
     text-align: center;
     max-width: 40%;
@@ -111,7 +130,14 @@ export const TextContainer = styled.p`
     height: 45%;
     max-height: 50%
     border-radius: 5px;
+    align-self: center;
+    justify-self: center;
     font-family: Montserrat;
+    @media screen and (max-width: 1000px) {
+        max-width: 80%;
+        align-self: center;
+        margin: 50px 0px 0px 0px;
+    }
 `;
 export const SupportText = styled.text`
     color: #000;
@@ -305,6 +331,11 @@ export const TeamImage = styled.img`
     font-size: 2rem; 
     max-height: 25rem;
     width: 20%; 
+    height: auto;
+    @media screen and (max-width: 1000px) {
+        max-height: 40rem;
+        padding: 5rem;
+    }
 `;
 export const HeartPicture = styled.img`
     flex: 1;

@@ -13,7 +13,7 @@ export const AboutPage = () => {
 
   return (
     <Container>
-      <PageHeader>About us</PageHeader>
+      <PageHeader id="AboutUs">About us</PageHeader>
       <Text>
         The Oak Ridge Robotics team was founded in the late 2016 by Oak Ridge Physics teacher Timothy Fox. Starting with only 5 students,
         the team has grown to include over 60 team members. With the support from our many sponsors and the gracious community of Texas at large,
@@ -21,7 +21,7 @@ export const AboutPage = () => {
         to VEX robotics.
       </Text>
       <hr />
-      <ActivitiesHeader>
+      <ActivitiesHeader id="Timeline">
         Our Timeline
       </ActivitiesHeader>
       <VerticalTimeline>

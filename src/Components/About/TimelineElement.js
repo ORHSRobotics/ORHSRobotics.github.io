@@ -3,7 +3,7 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
 export const TimelineElement = ({ date, title, description }) => {
   const [iconStyle, setIconStyle] = useState({
-    background: '#02b796',
+    background: '#014337',
     color: '#fff',
     width: '25px',
     height: '25px',
@@ -16,7 +16,7 @@ export const TimelineElement = ({ date, title, description }) => {
     const handleResize = () => {
       if (window.innerWidth < 1173) {
         setIconStyle({
-          background: '#02b796',
+          background: '#014337',
           color: '#fff',
           width: '25px',
           height: '25px',
@@ -25,7 +25,7 @@ export const TimelineElement = ({ date, title, description }) => {
         });
       } else {
         setIconStyle({
-          background: '#02b796',
+          background: '#014337',
           color: '#fff',
           width: '25px',
           height: '25px',
@@ -48,7 +48,7 @@ export const TimelineElement = ({ date, title, description }) => {
     <VerticalTimelineElement
       date={date}
       iconStyle={iconStyle}
-      contentStyle={{ background: '#f0f0f0', borderBottomColor: 'black', boxShadow: '0px 3px 0px #02b796' }}
+      contentStyle={{ background: '#f0f0f0', borderBottomColor: 'black', boxShadow: '0px 3px 0px #014337' }}
     >
       <h3 className="vertical-timeline-element-title" style={{ fontFamily: "Montserrat" }}>{title}</h3>
       {description && <p style={{ fontFamily: "Montserrat" }}>{description}</p>}

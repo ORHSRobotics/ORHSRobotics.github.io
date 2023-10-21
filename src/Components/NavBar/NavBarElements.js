@@ -2,7 +2,7 @@
 import { NavLink as Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { FaBars } from 'react-icons/fa';
-import logo from './../../Assets/ORHSRoboticsLogo.png'
+
 
 export const Nav = styled.nav`
   background: #fff;
@@ -13,10 +13,7 @@ export const Nav = styled.nav`
   
 `;
   
-export const Logo = styled.img.attrs({
-  src: logo,
-  alt: 'Logo'
-})`
+export const Logo = styled.img`
   width: 5rem;
   height: auto;
   margin-right: 1%;
@@ -52,7 +49,8 @@ export const NavLink = styled(Link)`
   font-size: min(2vw, 1.4rem); 
   font-family: Montserrat;
   &.active {
-    color: #02b796;
+    color: #014337;
+    text-decoration: underline;
   }
 `;
   

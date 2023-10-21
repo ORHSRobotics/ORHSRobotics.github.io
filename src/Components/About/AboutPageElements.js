@@ -15,15 +15,15 @@ export const Container = styled.section`
 
 export const PageHeader = styled.h1`
     color: #000;
-    font-size: 2.5vw;
+    font-size: min(5vw, 45px);
     max-width: 900px;
     padding: 0rem 2rem;
     font-family: Montserrat;
 `;
 
-export const ActivitiesHeader = styled.h1`
+export const ActivitiesHeader = styled.h2`
     color: #000;
-    font-size: 2vw;
+    font-size: font-size: min(4vw, 40px);
     max-width: 900px;
     padding: 0rem 2rem;
     font-family: Montserrat;
@@ -32,7 +32,7 @@ export const ActivitiesHeader = styled.h1`
 export const Text = styled.p`
     color: #000;
     align-self: center;
-    font-size: min(2.5vw, 25px);
+    font-size: min(4vw, 25px);
     text-align: center;
     padding: 0rem 2rem;
     max-width: 80%;

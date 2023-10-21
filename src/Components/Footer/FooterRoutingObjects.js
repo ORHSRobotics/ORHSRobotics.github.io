@@ -1,20 +1,18 @@
 
 export const About = {
     "Title": "About",
-    "About Us": "/About/AboutUs",
-    "Engineering":"/About/AboutUs/Engineering",
-    "Marketing":"/About/AboutUs/Marketing",
-    "Notebook":"/About/AboutUs/Notebook",
+    "About Us": { path: "/About", id: "AboutUs" },
+    "Timeline": { path: "/About", id: "Timeline" },
 }
 
 export const Game = {
     "Title": "The Game",
-    "Our Robot": "/TheGame/OurRobot",
-    "Game Details": "/TheGame/GameDetails",
+    "Game Details": { path: "/TheGame", id: "GameDetails" },
+    "Our Robot": { path: "/TheGame", id: "OurRobot" },
 }
 
 export const Sponsors = {
-    "Title": "Sponsorship",
-    "Our Sponsors": "/Sponsors/OurSponsors",
-    "Support Us": "/Sponsors/SupportUs"
+    "Title": "Sponsors",
+    "Our Sponsors": { path: "/Sponsors", id: "OurSponsors" },
+    "Support Us": { path: "/Sponsors", id: "SupportUs" }
 }

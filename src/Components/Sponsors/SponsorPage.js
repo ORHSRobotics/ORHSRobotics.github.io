@@ -6,7 +6,8 @@ import {
   ActivitiesHeader,
   SponsorDescription,
   MainContent,
-  HeartPicture
+  HeartPicture,
+  SponsorSupportText
 } from './AboutPageElements';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -17,6 +18,40 @@ import BlueHeart from './../../Assets/Blue Heart O1.png'
 
 export const SponsorsPage = () => {
   const [isDots, setIsDots] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  const [settings, setSettings] = useState({
+    dots: true, // isDots, assuming you have it defined somewhere
+    infinite: true,
+    speed: 500,
+    slidesToShow: window.innerWidth < 1000 ? 1 : 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    pauseOnHover: true,
+    centerPadding: window.innerWidth > 1000 ? '4vw' : '39vw',
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+
+      const newSettings = {
+        ...settings,
+        slidesToShow: window.innerWidth < 1000 ? 1 : 3,
+        centerPadding: window.innerWidth > 1000 ? '4vw' : '39vw',
+      };
+
+      setSettings(newSettings);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [settings]);
 
   useEffect(() => {
     const userAgent = window.navigator.userAgent;
@@ -24,18 +59,6 @@ export const SponsorsPage = () => {
     setIsDots(!isMobile);
   }, []);
 
-  const settings = {
-    dots: isDots,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Modify to change to 1 based on screen width
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    centerMode: true,
-    pauseOnHover: true,
-    centerPadding: '4vw', // Modify to scale with screen width
-  };
 
   const [formData, setFormData] = useState({
     name: '',
@@ -60,7 +83,7 @@ export const SponsorsPage = () => {
 
   return (
     <Container>
-      <PageHeader>Sponsors</PageHeader>
+      <PageHeader id="OurSponsors">Sponsors</PageHeader>
       <div style={{
         flexDirection: 'row',
         alignItems: 'center',
@@ -93,7 +116,7 @@ export const SponsorsPage = () => {
                   textAlign: 'center'
                 }}>
                   <img src={sponsor.logo} alt={sponsor.name} style={{
-                    width: '16vw', height: 'auto', alignItems: 'center', justifyContent: 'center',
+                    width: window.innerWidth > 1000 ? '16vw' : '30vw', height: 'auto', alignItems: 'center', justifyContent: 'center',
                     alignSelf: 'center',
                     textAlign: 'center'
                   }} />
@@ -119,15 +142,20 @@ export const SponsorsPage = () => {
           ))}
         </Slider>
       </div>
-      <MainContent>
-        <div style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', width: '50%', display:'flex', flexDirection: 'column' }}>
+      <MainContent id="SupportUs">
+        <div style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', width: '40%', display:'flex', flexDirection: 'column' }}>
           <Text>Interested in becoming a sponsor?</Text>
-          <HeartPicture src={BlueHeart}/>
+
+          <SponsorSupportText>
+            We at Oak Ridge Robotics are dedicated to serving our sponsors with the utmost loyalty, 
+            whether its a spreading the news about a spirit night, or winning competitions with their support, 
+            we treat our sponsors with the utmost respsect.
+            </SponsorSupportText>
         </div>
 
 
         {submitted && <Text style={{ color: 'green' }}>Form submitted successfully!</Text>}
-        <form onSubmit={handleSubmit} style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center' }}>
+        <form onSubmit={handleSubmit} style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', display: 'flex', width: '40vw' }}>
           <div style={{ backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '40px', margin: '10px', alignItems: "center", justifyContent: 'center', maxWidth: '500px', width: '80%' }}>
             <label style={{ display: 'block', marginBottom: '15px' }}>
               Name:
