@@ -76,6 +76,7 @@ export const Text = styled.p`
     text-align: center;
     padding: 0rem 2rem;
     max-width: 100%;
+    font-family: montserrat;
     @media screen and (max-width: 1000px) {
         width: 100%;
         padding: 0px;
@@ -85,10 +86,11 @@ export const Text = styled.p`
 export const SponsorSupportText = styled.p`
     color: #000;
     align-self: center;
-    font-size: min(2.5vw, 30px);
+    font-size: min(2vw, 25px);
     text-align: center;
     padding: 0rem 2rem;
     max-width: 100%;
+    font-family: montserrat;
     @media screen and (max-width: 1000px) {
         display: none;
     }

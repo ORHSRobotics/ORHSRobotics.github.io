@@ -21,7 +21,7 @@ export const SponsorsPage = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const [settings, setSettings] = useState({
-    dots: true, // isDots, assuming you have it defined somewhere
+    dots: window.innerWidth < 1000 ? false : true,
     infinite: true,
     speed: 500,
     slidesToShow: window.innerWidth < 1000 ? 1 : 3,
@@ -39,6 +39,7 @@ export const SponsorsPage = () => {
 
       const newSettings = {
         ...settings,
+        dots: window.innerWidth < 1000 ? false : true,
         slidesToShow: window.innerWidth < 1000 ? 1 : 3,
         centerPadding: window.innerWidth > 1000 ? '4vw' : '39vw',
       };
@@ -96,7 +97,7 @@ export const SponsorsPage = () => {
                 flexDirection: 'row',
                 borderRadius: '5px',
                 width: '25vw',
-                height: '60vh',
+                height: '65vh',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
@@ -132,7 +133,9 @@ export const SponsorsPage = () => {
                   borderRadius: '5px',
                   textDecoration: 'none',
                   transition: 'background-color 0.3s',
-                  fontFamily: "Montserrat"
+                  fontFamily: "Montserrat",
+                  position: 'absolute',
+                  top: '89%'
                 }}
                   onMouseOver={e => e.target.style.backgroundColor = '#0056b3'}
                   onMouseOut={e => e.target.style.backgroundColor = '#007BFF'}
@@ -155,7 +158,12 @@ export const SponsorsPage = () => {
 
 
         {submitted && <Text style={{ color: 'green' }}>Form submitted successfully!</Text>}
-        <form onSubmit={handleSubmit} style={{ textAlign: 'center', alignItems: 'center', justifyContent: 'center', display: 'flex', width: '40vw' }}>
+        <form onSubmit={handleSubmit} style={
+          { textAlign: 'center', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          display: 'flex',
+          width: window.innerWidth > 1000 ? '40vw': '80vw' }}>
           <div style={{ backgroundColor: '#f0f0f0', borderRadius: '5px', padding: '40px', margin: '10px', alignItems: "center", justifyContent: 'center', maxWidth: '500px', width: '80%' }}>
             <label style={{ display: 'block', marginBottom: '15px' }}>
               Name:

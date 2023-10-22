@@ -136,8 +136,12 @@ export const TheGame = () => {
                             Game Details
                         </Header>
                         <TextContainerOne>
-                            This years BEST Robotics competition, embodied by the phrase "Incision Decision", is themed around surgery.
-                            In this competition, robots are to assist surgeons such that the surgeon(s) can conduct multiple surgeries at once
+                            The theme for the BEST Robotics competition this year, Incision Decision,
+                            represents the concept that advancements in technology and innovation can improve future medical care.
+                            Incision Decision consists of a training platform for minimally invasive surgery (MIS) called Simbody.
+                            The platform simulates the internal human body and acts as a training ground for several assisted surgeries.
+                            The powerful machinery operated by training surgeons performs groundbreaking surgical procedures, transforming
+                            the medical field and saving lives.
                         </TextContainerOne>
                     </div>,
 
@@ -158,8 +162,8 @@ export const TheGame = () => {
                         <BiSection style={{ alignItems: 'center', justifyContent: 'center' }}>
                             <TextContainer>
                                 Our solution to this multi-facited problem? <br></br>
-                                Sir Jerry, a robot who is able to aid surgeons in brain biopsy, arterial plaque removal,
-                                vein harversting, internal hemorrhaging damage control, cardiac abalation, and coronary artery bypass.
+                                Dr. Jerry: a robot that is capable of aiding surgeons in a variety of
+                                operations, ranging from brain biopsy and arterial plaque removal to vein harvesting and cardiac ablation.
                             </TextContainer>
                             <div style={{ display: 'flex', marginLeft: '8vw' }}>
                                 <TeamImage src={SirJerry} alt="Picture of Sir Jerry" />
@@ -184,9 +188,12 @@ export const TheGame = () => {
                                 <TeamImage src={RobotPicture} alt="Sir Jerry completing the task of vein insertion" />
                             </div>
                             <TextContainer>
-                                Our robot, Sir Jerry, has the capability to perform two critical tasks in a surgical environment.
-                                The first task is "Vein Insertion", where it can accurately locate and insert a catheter into a patient's vein for fluid or medication delivery.
-                                The second task is "Hemorrhage Control", where it uses sensors to detect internal bleeding and can apply pressure or sealants to control the hemorrhage.
+                                Dr. Jerry, our advanced robotic system, excels in performing intricate medical
+                                procedures, including "Plaque Removal" and "Cardiac Ablation."
+                                In "Plaque Removal," the robot expertly navigates through arteries using a precisely
+                                engineered linear arm with linear slide rails and a specialized toolset
+                                for safe and efficient arterial plaque removal. Its exceptional precision
+                                ensures accurate interventions.
                             </TextContainer>
 
 
@@ -200,9 +207,12 @@ export const TheGame = () => {
                         '#f0f0f0',
                         <BiSection>
                             <TextContainer >
-                                Our robot, Sir Jerry, has the capability to perform two critical tasks in a surgical environment.
-                                The first task is "Vein Insertion", where it can accurately locate and insert a catheter into a patient's vein for fluid or medication delivery.
-                                The second task is "Hemorrhage Control", where it uses sensors to detect internal bleeding and can apply pressure or sealants to control the hemorrhage.
+                                Dr. Jerry, our advanced robotic system, excels in performing intricate medical
+                                procedures, including "Plaque Removal" and "Cardiac Ablation."
+                                In "Plaque Removal," the robot expertly navigates through arteries using a precisely
+                                engineered linear arm with linear slide rails and a specialized toolset
+                                for safe and efficient arterial plaque removal. Its exceptional precision
+                                ensures accurate interventions.
                             </TextContainer>
                             <div style={{ display: 'flex' }}>
                                 <TeamImage src={RobotPicture} alt="Sir Jerry completing the task of vein insertion" />
@@ -219,10 +229,14 @@ export const TheGame = () => {
                     '#fff',
                     <BiSection >
                         <TextContainer style={{}}>
-                            Sir Jerry is also adept at tasks that involve more intricate procedures.
-                            For example, it can perform "Plaque Removal" by navigating through arteries and using a specialized tool to safely remove arterial plaque.
-                            In "Cardiac Ablation", the robot can locate and neutralize problematic cardiac cells that cause arrhythmia, improving heart function.
-                        </TextContainer>
+                            In the domain of "Cardiac Ablation,"
+                            Dr. Jerry skillfully identifies and neutralizes problematic cardiac cells
+                            responsible for arrhythmias, thereby enhancing cardiac function.
+                            This is facilitated by a well-structured PVC tee piece integrated
+                            into the linear arm for plaque removal and another at the base for
+                            ablation tool use. These technical innovations enable the seamless
+                            execution of complex medical procedures, prioritizing patient care
+                            and optimal clinical outcomes.</TextContainer>
                         <div style={{ display: 'flex', marginLeft: '8vw', alignItems: "center" }}>
                             <TeamImage src={PlaqueRemoval} alt="Sir jerry completing the task of plaque removal" />
                         </div>

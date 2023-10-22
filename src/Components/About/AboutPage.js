@@ -27,17 +27,25 @@ export const AboutPage = () => {
       <VerticalTimeline>
         <TimelineElement date="2022" title="Egg Robotics" />
         <TimelineElement date="2022" title="BEST Robotics | Made 2 Order"/>
-        <TimelineElement date="2017" title="Egg Robotics" />
+
+        <TimelineElement date="2021" title="Egg Robotics" />
         <TimelineElement date="2021" title="BEST Robotics | DemoDaze" />
         <TimelineElement date="2021" title="VEX Robotics" />
-        <TimelineElement date="2017" title="Egg Robotics" />
-        <TimelineElement date="2021" title="BEST Robotics | Outbreak" />
-        <TimelineElement date="2021" title="VEX Robotics" />
-        <TimelineElement date="2021" title="BEST Robotics | Off the Grid" />
-        <TimelineElement date="2018" title="BEST Robotics | Current Events" />
-        <TimelineElement date="2017" title="VEX Robotics" />
-        <TimelineElement date="2017" title="BEST Robotics | Outbreak"/>
 
+        <TimelineElement date="2020" title="Egg Robotics" />
+        <TimelineElement date="2020" title="BEST Robotics | Outbreak" />
+        <TimelineElement date="2020" title="VEX Robotics" />
+
+        <TimelineElement date="2019" title="BEST Robotics | Off the Grid" />
+        <TimelineElement date="2019" title="VEX Robotics" />
+
+        
+        <TimelineElement date="2018" title="BEST Robotics | Current Events" />
+        <TimelineElement date="2018" title="VEX Robotics" />
+
+        
+        <TimelineElement date="2017" title="BEST Robotics | Outbreak"/>
+        <TimelineElement date="2017" title="VEX Robotics" />
       </VerticalTimeline>
     </Container>
   )

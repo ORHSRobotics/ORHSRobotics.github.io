@@ -38,11 +38,10 @@ export const HomePage = () => {
                             Our Mission
                         </OurMission>
                         <SupportText>
-                            We are Oak Ridge Robotics, a team dedicated to the cultivation of sudent expertise relating to 
-                            Science, Technology, Engineering, and Mathematics (STEM) and to inspire students to consider 
-                            post-secondary educational paths in these disciplines. 
-                            Established in 1999, we have participated in a range of robotics competitions such as BEST, VEX, and FRC 
-                            to provide hands-on STEM experiences.
+                            We are Oak Ridge Robotics, a team dedicated to the cultivation of student expertise in fields relating to
+                            Science, Technology, Engineering, and  Mathematics (STEM) and to inspire students to consider post-secondary
+                            educational paths in these disciplines. Established in 2006, we have competed in a range of robotics competitions
+                            ranging from BEST with wooden robots, to metal ones in the VEX competition.
                         </SupportText>
                     </>,
                     'auto', '100%'

@@ -102,13 +102,15 @@ export const VideoBackgroundSection = styled.video`
 `;
 
 export const TextContainerOne = styled.p`
-    padding: 2% 2%;
+    padding: 2% 2% 2% 4%;
     border-radius: 1rem;
     font-size: min(2.5vw, 25px);
     color: #000;
     text-align: center;
+    justify-self: center;
+    align-self: center;
     max-width: 80%;
-    margin: 10px 5%;
+    margin: 10px 5% 10px 5%;
     margin-bottom: 7%;
     height: 45%;
     max-height: 50%
@@ -116,6 +118,7 @@ export const TextContainerOne = styled.p`
     font-family: Montserrat;
     @media screen and (max-width: 1000px) {
         font-size: min(3.5vw, 25px);
+        align-self: center;
     }
 `;
 

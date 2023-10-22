@@ -35,13 +35,13 @@ export const sponsorsData = [
     {
         logo: SpaceCadets,
         name: "Space Cadets",
-        description: "Space Cadets is your one-stop shop for a wide range of items, including games and more explore a diverse selection of entertainment and hobby products at Space Cadets.",
+        description: "Space Cadets is your one-stop shop for a wide range of items; explore a diverse selection of entertainment at Space Cadets.",
         link: "https://spacecadetsgaming.com/"
     },
     {
         logo:  JaxLogo,
         name: "Jax Burgers",
-        description: "Jax Burgers, known for serving the finest blend of beef, crispy fries, and awesome shakes, is a go-to destination for burger lovers. Enjoy the best burgers in Texas.",
+        description: "Jax Burgers, known for being a go-to destination for burger lovers. Enjoy the best burgers in Texas.",
         link: "https://jaxburgers.com/"
     },
     {
